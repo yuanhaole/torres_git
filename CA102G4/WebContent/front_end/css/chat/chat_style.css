@@ -1,0 +1,205 @@
+    .chatContainer,
+    .input_chatContainer{
+       position: fixed;
+       bottom: 0;
+       right: 50px;
+       width: 279px;
+       height: 28px;
+       border-color: black;
+       background-color:#f5f6f7;
+       z-index: 1000;
+       border-radius: 5px;
+       box-shadow: 0 2px 8px 0 rgba(0, 0, 0, .3);
+    }
+    
+    
+    
+    /*聊天對話內容視窗*/
+    .input_chatContainer{
+       height: 344px;
+    }
+     /*聊天對話內容視窗縮小*/
+    .chatWindow_Content{
+        height: 28px;
+    }
+    
+/*     .input_chatContainer{ */
+/*     	right:350px; */
+/*     } */
+    
+    .chatHeader,
+    .input_chatHeader{
+        position: absolute;
+        top:0;
+        background-color:#3578e5;
+        z-index: 2000;
+        width: 279px;
+        height: 28px;
+        border-radius: 5px 5px 0px 0px;
+        color: white;
+        
+    }
+    .input_chatHeader{
+
+        background-color:RGB(250, 110, 122);
+    }
+    .chatContext,
+    .input_chatContext{
+        margin-top:29px;
+        background-color:#f5f6f7;
+        z-index: 2000;
+        width: 279px;
+        height: 282px;
+        border-radius: 5px 5px 0px 0px;
+        overflow-x:hidden;
+        overflow-y:auto;   
+    }
+    
+    .input_chatContext{
+    	background-color:white;
+    }
+    
+    .chatFooter,
+    .input_chatFooter{
+        top:340;
+        background-color:#f5f6f7;
+        z-index: 2000;
+        width: 279px;
+        height: 34px;
+        border-radius: 5px 5px 0px 0px;
+        
+    }
+   	/*建立新對話的提示框 */ 
+    .tooltip.fade.top,.tooltip.fade.top.in{
+        width: fit-content;
+    }
+    /*��予��”�����＊蝷�*/
+    .avatar {
+    vertical-align: middle;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    }
+    /*聊天列表小視窗的搜尋輸入盒*/
+    .chatFooter>.input-group,
+    .chatFooter .form-control ,
+    .input_chatFooter>.input-group,
+    .input_chatFooter .form-control{
+        height: 33px;
+        font-size: 12px;
+        border: 0;
+    }
+    
+     /*聊天列表小視窗的搜尋圖示區塊*/
+    .input-group-addon{
+        background-color: white;
+        border: 0;
+    }
+        
+    /*聊天列表放大*/
+    .chatWindow{
+        height: 344px;
+    }
+    .list-group-item{
+        background-color:#f5f6f7;
+        border:0;
+        color: rgb(51, 51, 51);
+    }
+    .list-group-item:hover{
+        background-color:#e3e6e8;
+    }
+    /*輸入盒內字型調整*/
+    .ui.input > input {
+        font-family: 'Oswald','Noto Sans TC', sans-serif;
+    }
+   /*聊天內容的每收到的一個訊息(列)*/
+    .chatTextItem_self{
+    	width:279px;
+    	float:right;
+    	margin-bottom:3px;
+    }
+    /*聊天內容的每收到的一個訊息(文字)*/
+    .chatTextItem_self > span> span{
+    	background-color:RGB(250, 110, 122);
+    	width:auto;
+    	max-width:140px;
+    	/*因為span是行內元素所以透過block轉成塊級元素*/
+    	display:block; 
+    	float: right;
+    	border-radius: 5px 0px 5px 5px;  /*左、右、右下、左下*/
+    	padding: 5px;
+    	word-wrap:break-word;
+		word-break:break-all;
+		color: rgb(51, 51, 51);
+    }
+    
+    .chatTextItem{
+        width:279px;
+        margin-bottom:10px;
+        float:left;
+    }
+    
+    .chatTextItem > span > span{
+    	background-color:#f1f0f0;
+    	width:auto;
+    	max-width:140px;
+    	/*因為span是行內元素所以透過block轉成塊級元素*/
+    	display:block; 
+    	border-radius: 5px 0px 5px 5px; /*左、右、右下、左下*/
+    	padding: 5px;
+    	float:left;
+    	word-wrap:break-word;
+		word-break:break-all;
+		color: rgb(51, 51, 51);
+    }
+    
+
+    .chatTextItem_self > span + .tooltip.right{
+		margin-top:10px;
+    	margin-left:280px;
+    	white-space:nowrap;
+
+    }
+    
+    .chatTextItem > span + .tooltip.right{
+    	margin-top:10px;
+    	margin-left:170px;
+    	white-space:nowrap; /*空白處理*/
+
+    }
+    
+     /*參與某聊天對話的名單的每一列*/
+    #chatRoomJoin_Modal .item{
+    	margin-top:10px;
+    	margin-bottom:10px;
+    	border: 0px;
+    	width:100%;
+    }
+    
+   /*加入更多人，若該朋友已在聊天對話時，將disable checkbox及改變顏色*/
+    input[type="checkbox"][disabled]+label,
+    input[type="checkbox"][disabled]+label:hover{
+    	color:LightGrey;
+    	cursor:not-allowed;
+    }
+    
+     /*顯示是否上線的狀態*/
+    .online_status{
+    	float: right;
+    }
+    
+    /*若有上線的話，顯示的圖示*/
+    .fas.fa-circle{
+	    color: #42B72A;
+	    font-size: 10px;
+    }
+	/*創建群組及加入更多人的標題顏色*/
+    #chatRoomJoin_Modal h4,
+	#chat_AddFri_Modal h4 {
+		color:rgb(51, 51, 51);
+	}
+    /*加入更多人的checkbox那一列*/
+    #chat_AddFri_Modal .modal-body .item{
+    	border: 0px;
+    	width:100%;
+    }
